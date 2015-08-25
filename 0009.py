@@ -9,7 +9,7 @@ url = 'http://www.ruanyifeng.com/blog/2015/07/monad.html'
 def extract(url):
     g = Goose({'stopwords_class': StopWordsChinese})
     article = g.extract(url=url)
-    return article.cleaned_text
+    return article.links
 
 if __name__ == '__main__':
     print extract(url)
